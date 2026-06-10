@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  tuleap:
+    image: tuleap/tuleap-community-edition
+    hostname: tuleap
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - tuleap-data:/data
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: tuleap_root
+      MYSQL_DATABASE: tuleap
+      MYSQL_USER: tuleap
+      MYSQL_PASSWORD: tuleap_pass
+    volumes:
+      - db-data:/var/lib/mysql
+
+  redis:
+    image: redis:alpine
+    restart: always
+
+volumes:
+  tuleap-data:
+  db-data:
