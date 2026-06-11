@@ -33,7 +33,7 @@ tuleapp-qa-workflow/
 
 ## 📸 Screenshots del tablero
 
-![Board QA](https://raw.githubusercontent.com/ryaty1-RM/tuleapp-qa-workflow/main/screenshots/Captura%20de%20pantalla%202026-06-11%20155153.png)
+![Board QA](https://raw.githubusercontent.com/ryaty1-RM/tuleapp-qa-workflow/main/screenshots/tuleap.png)
 
 ---
 
